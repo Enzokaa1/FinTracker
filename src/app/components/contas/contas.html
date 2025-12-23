@@ -1,0 +1,163 @@
+<div class="container">
+
+  <h1>FinTracker</h1>
+
+<div class="saldo-box">
+  
+
+
+  @if (erro) {
+    <div class="erro">{{ erro }}</div>
+  }
+
+  <form class="form" (ngSubmit)="criar()">
+
+<div class="campo tipo-container">
+    <label>Tipo:</label>
+    <select [(ngModel)]="tipo" name="tipo" required>
+      <option value="entrada">Entrada</option>
+      <option value="saida">Saída</option>
+    </select>
+  </div>
+
+    <div class="campo">
+      <label>Data:</label>
+      <input type="date" [(ngModel)]="data" name="data" required />
+    </div>
+
+
+    
+    <div class="campo">
+      <label>Categoria:</label>
+      <select [(ngModel)]="categoria" name="categoria" required>
+        <option value="">Selecione...</option>
+        <option value="Salário">Salário</option>
+        <option value="Refeição">Refeição</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Jogos">Jogos</option>
+        <option value="Assinatura">Assinatura</option>
+        <option value="Roupa">Roupa</option>
+        <option value="Investimento">Investimento</option>
+        <option value="Diverso">Diverso</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label>Valor:</label>
+      <input type="number" [(ngModel)]="valor" name="valor" required />
+    </div>
+
+    <div class="campo">
+      <label>Descrição:</label>
+      <input type="text" [(ngModel)]="descricao" name="descricao" />
+    </div>
+
+    <button class="btn" [disabled]="salvando">Adicionar</button>
+
+    @if (salvando) {
+      <span class="status">Salvando...</span>
+    }
+  </form>
+
+  <hr />
+
+<div class="filtros-container">
+  <!-- Filtro por Categoria -->
+  <div class="filtro-centro">
+    <label>Filtrar por Categoria:</label>
+    <select [(ngModel)]="filtroCategoria" name="filtroCategoria">
+      <option value="">Todas</option>
+      <option value="Salário">Salário</option>
+      <option value="Refeição">Refeição</option>
+      <option value="Transporte">Transporte</option>
+      <option value="Jogos">Jogos</option>
+      <option value="Assinatura">Assinatura</option>
+      <option value="Roupa">Roupa</option>
+      <option value="Investimento">Investimento</option>
+      <option value="Diverso">Diverso</option>
+    </select>
+  </div>
+
+  <!-- Filtro por Mês -->
+  <div class="filtro-mes">
+  <label>Filtrar por Mês:</label>
+  <select [(ngModel)]="filtroMes" name="filtroMes">
+    <option value="">Todos</option>
+    <option value="0">Janeiro</option>
+    <option value="1">Fevereiro</option>
+    <option value="2">Março</option>
+    <option value="3">Abril</option>
+    <option value="4">Maio</option>
+    <option value="5">Junho</option>
+    <option value="6">Julho</option>
+    <option value="7">Agosto</option>
+    <option value="8">Setembro</option>
+    <option value="9">Outubro</option>
+    <option value="10">Novembro</option>
+    <option value="11">Dezembro</option>
+  </select>
+</div>
+</div>
+
+
+
+
+
+
+  @if (carregando) {
+    <p>Carregando dados...</p>
+  }
+
+  @if (!carregando) {
+
+    @if (contas.length === 0) {
+      <p class="nenhuma">Nenhuma movimentação encontrada.</p>
+    }
+
+   @if (contas.length > 0) {
+  <table class="tabela">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Data</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Descrição</th>
+        <th>-</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (conta of contasFiltradas(); track conta._id) {
+        <tr class="linha categoria-{{ conta.categoria | lowercase }}">
+          <td>
+            <span class="indicador"
+                  [class.entrada]="conta.tipo === 'entrada'"
+                  [class.saida]="conta.tipo === 'saida'"></span>
+          </td>
+
+          <td>{{ formatDate(conta.data) }}</td>
+          <td>{{ conta.categoria }}</td>
+          <td>R$ {{ conta.valor }}</td>
+          <td>{{ conta.descricao }}</td>
+
+          <td>
+            <button class="btn-danger" (click)="excluir(conta._id)">Excluir</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
+  }
+
+</div>
+
+<h2 class="saldo-box-total">
+    Saldo Total:
+    <span [class.saldo-positivo]="saldoTotal >= 0"
+          [class.saldo-negativo]="saldoTotal < 0">
+      R$ {{ saldoTotal }}
+    </span>
+  </h2>
+</div>

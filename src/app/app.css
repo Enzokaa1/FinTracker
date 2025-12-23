@@ -1,0 +1,21 @@
+.header {
+  background: #f8fafc;
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+:host {
+  display: block;
+  background-color: #1E1E2F; /* FUNDO */
+  min-height: 100vh;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
