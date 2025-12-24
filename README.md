@@ -1,59 +1,74 @@
-# AFAngular
+# FinTracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+Aplicação web desenvolvida em **Angular** para controle financeiro pessoal, permitindo o gerenciamento de receitas e despesas, organização por categorias e cálculo automático de saldos.
 
-## Development server
+Este projeto foi desenvolvido com foco em aprendizado prático, aplicando conceitos fundamentais de desenvolvimento front-end, consumo de **API REST**.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Funcionalidades
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Cadastro de receitas e despesas
+- Organização dos lançamentos por categorias
+- Cálculo automático do saldo total
+- Cálculo do saldo do mês selecionado
+- Filtragem por categoria e mês
+- Listagem dinâmica dos registros financeiros
+- Indicadores de carregamento e tratamento de erros
+- Interface simples, clara e objetiva
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-ng generate component component-name
-```
+- Node.js
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Bootstrap
+- MongoDB
+- API REST
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📦 Pré-requisitos
 
-## Building
+Para executar a aplicação corretamente, é necessário ter:
 
-To build the project run:
+- Node.js
+- Angular CLI
+- Uma API REST compatível, responsável pelo fornecimento e persistência dos dados financeiros
 
-```bash
-ng build
-```
+A aplicação foi desenvolvida para consumir uma API REST própria, mantida em repositório privado por conter configurações e credenciais sensíveis. Qualquer API que siga o mesmo padrão de endpoints e estrutura de dados poderá ser integrada à aplicação sem alterações significativas no front-end.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🔒 Sobre a API
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Este projeto consome uma **API REST desenvolvida especificamente para a aplicação**, responsável por gerenciar os dados financeiros, como receitas, despesas e categorias.
 
-```bash
-ng test
-```
+Por conter credenciais sensíveis, regras de segurança e configurações de ambiente, o repositório da API foi mantido privado, evitando a exposição de informações críticas em um ambiente público. Essa abordagem segue práticas de segurança adotadas em projetos reais, especialmente em aplicações que lidam com dados financeiros.
 
-## Running end-to-end tests
+O foco deste repositório é apresentar a arquitetura, a lógica e a implementação do front-end em Angular, demonstrando o consumo de uma API, a organização dos services e o tratamento de dados assíncronos.
 
-For end-to-end (e2e) testing, run:
+Caso seja necessário avaliar ou adaptar o projeto, a aplicação pode ser facilmente integrada a qualquer API REST que siga o mesmo padrão de endpoints e estrutura de dados utilizada durante o desenvolvimento.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🎯 Objetivo do Projeto
 
-## Additional Resources
+O objetivo deste projeto é consolidar e aplicar conhecimentos em desenvolvimento front-end com Angular, utilizando uma arquitetura baseada no consumo de APIs REST.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+A aplicação foi desenvolvida com foco na organização de componentes, uso de services para comunicação com a API, tratamento de dados assíncronos e separação de responsabilidades, simulando um cenário próximo ao de aplicações utilizadas em ambiente profissional.
+
+Além disso, o projeto busca reforçar boas práticas de versionamento com Git, estruturação de código e clareza na construção de interfaces funcionais e intuitivas.
+
+---
+
+## 📌 Status do Projeto
+
+O projeto encontra-se finalizado em sua versão atual, com as funcionalidades principais implementadas e funcionando conforme o escopo definido.
+
+Futuras melhorias poderão ser realizadas, como a adição de novos relatórios, aprimoramentos visuais, otimizações de código e expansão das funcionalidades existentes.
+
