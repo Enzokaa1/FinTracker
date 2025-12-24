@@ -42,6 +42,7 @@ Para executar a aplicação corretamente, é necessário ter:
 
 A aplicação foi desenvolvida para consumir uma API REST própria, mantida em repositório privado por conter configurações e credenciais sensíveis. Qualquer API que siga o mesmo padrão de endpoints e estrutura de dados poderá ser integrada à aplicação sem alterações significativas no front-end.
 
+---
 
 ## 🔒 Sobre a API
 
@@ -53,6 +54,8 @@ O foco deste repositório é apresentar a arquitetura, a lógica e a implementa�
 
 Caso seja necessário avaliar ou adaptar o projeto, a aplicação pode ser facilmente integrada a qualquer API REST que siga o mesmo padrão de endpoints e estrutura de dados utilizada durante o desenvolvimento.
 
+---
+
 ## 🎯 Objetivo do Projeto
 
 O objetivo deste projeto é consolidar e aplicar conhecimentos em desenvolvimento front-end com Angular, utilizando uma arquitetura baseada no consumo de APIs REST.
@@ -60,6 +63,8 @@ O objetivo deste projeto é consolidar e aplicar conhecimentos em desenvolviment
 A aplicação foi desenvolvida com foco na organização de componentes, uso de services para comunicação com a API, tratamento de dados assíncronos e separação de responsabilidades, simulando um cenário próximo ao de aplicações utilizadas em ambiente profissional.
 
 Além disso, o projeto busca reforçar boas práticas de versionamento com Git, estruturação de código e clareza na construção de interfaces funcionais e intuitivas.
+
+---
 
 ## 📌 Status do Projeto
 
