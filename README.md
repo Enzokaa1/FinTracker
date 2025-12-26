@@ -17,6 +17,8 @@ Este projeto foi desenvolvido com foco em aprendizado prático, aplicando concei
 - Indicadores de carregamento e tratamento de erros
 - Interface simples, clara e objetiva
 
+<img width="1870" height="927" alt="FinTracker-page" src="https://github.com/user-attachments/assets/b708742f-d205-4f02-975d-717e9e554a74" />
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
