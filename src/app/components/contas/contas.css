@@ -170,7 +170,7 @@ select {
 
 .tabela th,
 .tabela td {
-  text-align: center;   /* centraliza todos os textos da tabela */
+  text-align: center; /* centraliza todos os textos da tabela */
   padding: 10px;
 }
 
@@ -218,6 +218,10 @@ select {
 /* cor de cada categoria */
 .categoria-salário {
   background-color: #2e8b57;
+  color: #f4f4f4;
+}
+.categoria-cartão {
+  background-color: #bd573d;
   color: #f4f4f4;
 }
 .categoria-refeição {
@@ -298,4 +302,3 @@ hr {
   max-width: 600px;
   margin: 20px auto;
 }
-
